@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import './App.css';
+import { setCountries } from './redux/reducer';
+import Home from './components/Home';
+import Header from './components/Header';
+import Regions from './components/Regions';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setCountries());
+    return () => {
+
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route path="/" element={<Home />} />
+          <Route path='/:Regions' element={<Regions />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
