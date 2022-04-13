@@ -1,10 +1,10 @@
 export const regionsState = [];
 
-const SET_ALL = 'covid19/SET_ALL';
+const SET_REGIONS = 'covid19/SET_REGIONS';
 
 export const regionsReducer = (state = regionsState, action) => {
   switch (action.type) {
-    case SET_ALL:
+    case SET_REGIONS:
       return action.regions;
     default:
       return state;
@@ -14,6 +14,6 @@ export const regionsReducer = (state = regionsState, action) => {
 //const refactorResponse = (response) => Object.values(response.data.dates['2022-04-12'].countries);
 
 export const setRegions = (regions) =>{
-  console.log('from reducer', countries);
-  dispatch({ type: SET_ALL, regions });
+  console.log('from region reducer', regions);
+ return { type: SET_REGIONS, regions };
 };

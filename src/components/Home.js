@@ -12,7 +12,7 @@ function Home() {
       <div className="home_country_list">
         {data.map(
           (item) => (
-            <Country key={item.id} country={item.id} confirmed={item.today_confirmed} />
+            <Country key={item.id} country={item} />
           ),
         )}
       </div>
