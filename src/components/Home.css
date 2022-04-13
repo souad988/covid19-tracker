@@ -1,6 +1,3 @@
-.home_container {
-    margin: 5vh 10%;
-}
 .home_country_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
