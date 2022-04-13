@@ -4,7 +4,7 @@ import Country from './Country';
 import './Home.css';
 
 function Home() {
-  const data = useSelector((state) => state);
+  const data = useSelector((state) => state.countries);
   console.log('from home', data);
   return (
     <div className="home_container">
