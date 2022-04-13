@@ -5,6 +5,7 @@ import './App.css';
 import { setCountries } from './redux/reducer';
 import Home from './components/Home';
 import Header from './components/Header';
+import Regions from './components/Regions';
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Header />}>
           <Route path="/" element={<Home />} />
+          <Route path='/:Regions' element={<Regions />} />
         </Route>
       </Routes>
     </div>
