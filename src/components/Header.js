@@ -26,10 +26,14 @@ function Header() {
             <i className="fas fa-cog" />
           </div>
         </nav>
-        <h1>
+        {/* style={{backgroundImage: `url('https://mapsvg.com/static/maps/geo-calibrated/world.svg')`}} */}
+       <div className='header_img'  >  
+        <img src='https://mapsvg.com/static/maps/geo-calibrated/world.svg' alt='map' />
+        <strong>  
           {' '}
-          {header_state.global_cases>0? header_state.global_cases:'loading'}
-        </h1>
+          {header_state.global_cases > 0?'global cases :'+header_state.global_cases:'loading'}
+        </strong>
+        </div>
       </header>
       <section className="main">
         <Outlet />

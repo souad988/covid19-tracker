@@ -1,4 +1,4 @@
-export const headerState = { img: '', global_cases: 5 };
+export const headerState = { img: 'https://mapsvg.com/maps/world.svg', global_cases: '' };
 
 const SET_HEADER = 'covid19/SET_HEADER';
 
