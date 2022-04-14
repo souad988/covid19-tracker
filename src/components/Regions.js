@@ -1,31 +1,27 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import './Regions.css'
 
 function Regions() {
   const country = useParams().Regions;
   const regions = useSelector((state) => state.regions);
   console.log('regions', regions);
   return (
-    <div>
-      <h3>
-        {' '}
-        country :
-        {country}
-      </h3>
-      {regions.length < 1 ? `No regional data provided for ${country}` : (
-        <ul>
-          {regions.map((region) => (
+    <div className='Regions_container'>
+      <ul>
+      {regions.length < 1 ? <div className='regions_error'>{`!! No regional data provided for ${country}`}</div> : (
+        
+          regions.map((region) => (
             <li key={region.id}>
-              {region.id}
-              {' '}
-              :
-              {' '}
-              {region.today_confirmed}
+              <strong>{region.name}</strong>
+              
+              <strong>{region.today_confirmed}</strong>
             </li>
-          ))}
-        </ul>
+          ))
+        
       )}
+      </ul>
     </div>
   );
 }

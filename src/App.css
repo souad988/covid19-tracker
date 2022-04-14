@@ -3,7 +3,17 @@
   padding: 0%;
 }
 
+/* html {
+  background-color: #00455B;
+}
+body {
+  background-color: transparent;
+} */
+
 .App {
-  margin: 5vh 5%;
+  margin: auto;
+  max-width: 100vw;
+  background-color: #4ce9e4 ;
+  min-height: 100vh;
 }
 

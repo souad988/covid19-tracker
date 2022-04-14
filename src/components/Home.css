@@ -1,5 +1,18 @@
 .home_country_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5vh 5%;
+    margin: auto;
+  
+}
+
+@media screen and (min-width: 600px) {
+    .home_country_list {
+        grid-template-columns: 1fr 1fr 1fr ;
+    }   
+} 
+
+@media screen and (min-width: 900px) {
+    .home_country_list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }   
 }

@@ -1,10 +1,61 @@
 header {
-  height: 25vh;
-
+  height: 42vh;
+  background-color: #009688;
+  /* opacity: 0.5; */
 }
 
 nav {
+    padding: 0% 2%;
+    background-color: #00455B;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+nav * {
+    color: white;
+}
+
+/* .header_img {
+    margin: auto;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.header_img img {
+    width: 60%;
+    height: 100%;
+}
+
+.header_img span {
+    justify-self: end;
+} */
+
+.fa-microphone {
+    margin-right: 10px;
+}
+
+.header_img {
+    width: inherit;
+    height: 37vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.header_info {
+    position: absolute;
+    right: 0%;
+    top: 23vh;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
 }
