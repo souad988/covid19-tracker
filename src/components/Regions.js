@@ -15,8 +15,10 @@ function Regions() {
           regions.map((region) => (
             <li key={region.id}>
               <strong>{region.name}</strong>
-              
+              <div>
               <strong>{region.today_confirmed}</strong>
+              <i className="fas fa-sign-in-alt" />
+              </div>
             </li>
           ))
         
