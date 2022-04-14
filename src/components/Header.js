@@ -29,10 +29,13 @@ function Header() {
         {/*  */}
        <div className='header_img' 
        style={{backgroundImage: `url(${headerState.img})`}} >  
-        {/* <img src='https://mapsvg.com/static/maps/geo-calibrated/world.svg' alt='map' /> */}
+       </div>
+       <div className='header_info'>
         <strong style={{marginRight:'5%'}}>  
           {' '}
-          {headerState.global_cases > 0?'Total :'+headerState.global_cases:'loading'}
+          {headerState.global_cases > 0?(
+                             headerState.country? headerState.country+' '+headerState.global_cases
+                            : 'Total '+headerState.global_cases):'loading'}
         </strong>
         </div>
       </header>

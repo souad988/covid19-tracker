@@ -1,10 +1,8 @@
 .home_country_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 90vw;
     margin: auto;
-    gap: 1vh 1vh;
-    margin-top: -5vh;
+  
 }
 
 @media screen and (min-width: 600px) {

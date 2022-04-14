@@ -12,19 +12,19 @@ function Country({ ...props }) {
   const imgUrl = 'https://mapsvg.com/static/maps/geo-calibrated'+link+'.svg'
   const handleClick = (country) => {
     dispatch(setRegions(country.regions));
-    dispatch(setHeader({ global_cases: country.today_confirmed, img: imgUrl }));
+    dispatch(setHeader({ global_cases: country.today_confirmed, img: imgUrl , country: country.name}));
   };
   return (
     <div className="country_container" > 
       {/* <img src={imgUrl} alt='map' /> */}
-      <div className='country_img'  style={{backgroundImage: `url(${imgUrl})`}}>
+      <div className='country_img'  style={{backgroundImage: `url(${imgUrl})`}}></div>
       <div className='country_info_side'> 
       <Link to={link} onClick={() => handleClick(country)} ><i className="fas fa-sign-in-alt" /></Link>
       <div>
         <strong>{country.name}</strong><br/>
         <strong>{country.today_confirmed}</strong>
       </div>
-      </div></div>
+      </div>
       </div>
   );
 }

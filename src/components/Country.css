@@ -4,6 +4,7 @@
     padding: 10px!important;
     background-color: #00455B;
     border: 1px solid #4ce9e4 ;
+    position: relative;
 }
 
 .country_info_side {
@@ -11,7 +12,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    height: 25vh;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    top: 0;
+    right: 5%;
     
 }
 
@@ -20,9 +25,8 @@
 }
 
 .country_img {
-    width: 12rem;
-    height: 22vh;
-    position: absolute;
+    width: inherit;
+    height: 75%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

@@ -5,13 +5,10 @@
 } */
 
 .Regions_container {
-    width: 60%;
-    margin: auto;
     text-align: center;
-    background-color: #3b5d68;
-    border-radius: 10px;
+    background-color: #009688;
     border:1px solid #00455B;
-    padding: 10px;
+    min-height: 70vh;
 }
 
 .Regions_container ul {
@@ -24,14 +21,20 @@
 }
 
 .Regions_container li:nth-child(2n) {
-    background-color: #4ce9e4;
+    background-color: #009688;
 }
 
 .Regions_container li {
-    padding: 5px 10px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
-    border-radius: 10px;
     border: 1px solid #00455B;
     color: #00455B;
+}
+
+.regions_error {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5vh;
+    color: #ffeb3b;
 }

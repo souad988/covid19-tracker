@@ -11,6 +11,7 @@ import { setHeader } from './redux/headerReducer';
 function App() {
   const dispatch = useDispatch();
   const countriesState = useSelector((state) => state.countries);
+  
   useEffect(() => {
     dispatch(setCountries());
   },[]);

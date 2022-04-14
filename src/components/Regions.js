@@ -9,11 +9,8 @@ function Regions() {
   console.log('regions', regions);
   return (
     <div className='Regions_container'>
-      <h3>
-        {' '}
-        {country}
-      </h3><ul>
-      {regions.length < 1 ? `No regional data provided for ${country}` : (
+      <ul>
+      {regions.length < 1 ? <div className='regions_error'>{`!! No regional data provided for ${country}`}</div> : (
         
           regions.map((region) => (
             <li key={region.id}>
