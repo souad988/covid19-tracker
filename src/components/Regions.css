@@ -1,0 +1,37 @@
+/* .Regions_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.Regions_container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    background-color: #3b5d68;
+    border-radius: 10px;
+    border:1px solid #00455B;
+    padding: 10px;
+}
+
+.Regions_container ul {
+    list-style: none;
+}
+
+.Regions_container li:nth-child(2n+1) {
+    background-color: #00455B;
+    color: white;
+}
+
+.Regions_container li:nth-child(2n) {
+    background-color: #4ce9e4;
+}
+
+.Regions_container li {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #00455B;
+    color: #00455B;
+}

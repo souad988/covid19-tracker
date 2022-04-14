@@ -1,5 +1,5 @@
 header {
-  height: 25vh;
+  height: 42vh;
   background-color: #4ce9e4;
   /* opacity: 0.5; */
 }
@@ -21,8 +21,12 @@ nav * {
     height: 80%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .header_img img {
@@ -32,4 +36,8 @@ nav * {
 
 .header_img span {
     justify-self: end;
+}
+
+.fa-microphone {
+    margin-right: 10px;
 }

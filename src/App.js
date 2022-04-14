@@ -15,7 +15,7 @@ function App() {
     dispatch(setCountries());
   },[]);
   useEffect(() => {
-    dispatch(setHeader({ global_cases: countriesState.global_cases, img: 'https://mapsvg.com/maps/world.svg' }));
+    dispatch(setHeader({ global_cases: countriesState.global_cases, img: 'https://mapsvg.com/static/maps/geo-calibrated/world.svg' }));
   }, [countriesState]);
 
   return (
