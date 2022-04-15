@@ -11,12 +11,16 @@ import { setHeader } from './redux/headerReducer';
 function App() {
   const dispatch = useDispatch();
   const countriesState = useSelector((state) => state.countries);
-  
+
   useEffect(() => {
     dispatch(setCountries());
-  },[]);
+  }, []);
   useEffect(() => {
-    dispatch(setHeader({ global_cases: countriesState.global_cases, img: 'https://mapsvg.com/static/maps/geo-calibrated/world.svg' }));
+    dispatch(setHeader({
+      globalCases: countriesState.globalCases,
+      img: 'https://mapsvg.com/static/maps/geo-calibrated/world.svg',
+      country: 'Global',
+    }));
   }, [countriesState]);
 
   return (

@@ -1,19 +1,20 @@
 header {
   height: 42vh;
-  background-color: #009688;
+  background-color: #3ad3c5;
+
   /* opacity: 0.5; */
 }
 
 nav {
-    padding: 0% 2%;
-    background-color: #00455B;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  padding: 0% 2%;
+  background-color: #00455b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 nav * {
-    color: white;
+  color: white;
 }
 
 /* .header_img {
@@ -39,44 +40,43 @@ nav * {
 } */
 
 .fa-microphone {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .header_img {
-    width: inherit;
-    height: 37vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.8;
+  width: inherit;
+  height: 37vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
 }
 
 .giphy-embed {
-    width: 48px;
-    height: 48px; 
-    color:#4ce9e4;  
-    background: transparent;
-    border: none;
+  width: 48px;
+  height: 48px;
+  color: #4ce9e4;
+  background: transparent;
+  border: none;
 }
 
 .header_info {
-    position: absolute;
-    right: 0%;
-    top: 30vh;
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-right: 5%;
-    text-align: end;
+  position: absolute;
+  right: 0%;
+  top: 30vh;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 5%;
+  text-align: end;
 }
 
 .header_info p {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .load {
-    width:100%;
-    height:0;
-    padding-bottom:100%;
-    position:relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
 }
