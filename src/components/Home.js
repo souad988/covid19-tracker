@@ -7,8 +7,6 @@ import load from '../assets/loading.gif';
 function Home() {
   const countries = [];
   const data = useSelector((state) => state.countries);
-
-  console.log('from home', countries);
   return (
     <div className="home_container">
 

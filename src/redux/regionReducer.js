@@ -12,7 +12,6 @@ export const regionsReducer = (state = regionsState, action) => {
 };
 
 export const setRegions = (regions) => {
-  console.log('from region reducer', regions);
   const data = (regions.length === 0) ? [] : regions;
   return { type: SET_REGIONS, data };
 };

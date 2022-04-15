@@ -9,7 +9,6 @@ function Header() {
   const dispatch = useDispatch();
   const headerState = useSelector((state) => state.header);
   const countriesState = useSelector((state) => state.countries);
-  console.log('header compnent', headerState.global_cases, headerState.country);
   const handleClick = (globalCases) => {
     dispatch(setHeader({ globalCases, img: 'https://mapsvg.com/static/maps/geo-calibrated/world.svg', country: 'Global' }));
   };
