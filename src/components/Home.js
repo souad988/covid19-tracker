@@ -5,7 +5,6 @@ import './Home.css';
 import load from '../assets/loading.gif';
 
 function Home() {
-  const countries = [];
   const data = useSelector((state) => state.countries);
   return (
     <div className="home_container">

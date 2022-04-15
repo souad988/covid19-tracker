@@ -50,10 +50,9 @@ Country.propTypes = {
 };
 
 Country.defaultProps = {
-    regions: [],
-    regions:[{
+  regions: [{
     id: '',
-    name:'',
-    confirmed:0,
-    }]  
-  };
+    name: '',
+    confirmed: 0,
+  }],
+};
