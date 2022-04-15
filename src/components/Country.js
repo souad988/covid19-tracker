@@ -42,9 +42,18 @@ Country.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   confirmed: PropTypes.string.isRequired,
-  regions: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    confirmed: PropTypes.string.isRequired,
-  }).isRequired,
+  regions: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    confirmed: PropTypes.string,
+  })),
 };
+
+Country.defaultProps = {
+    regions: [],
+    regions:[{
+    id: '',
+    name:'',
+    confirmed:0,
+    }]  
+  };

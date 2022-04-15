@@ -6,7 +6,6 @@ import './Regions.css';
 function Regions() {
   const country = useParams().Regions;
   const regions = useSelector((state) => state.regions);
-  console.log('regions', regions);
   return (
     <div className="Regions_container">
       <ul>
