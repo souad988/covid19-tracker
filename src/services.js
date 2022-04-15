@@ -1,4 +1,3 @@
-const incSortByCases = (countries) => countries.sort((a, b) => b.today_confirmed - a.today_confirmed);
 const reformulateCountryName = (country) => {
   if (country === 'US') {
     return 'USA';
@@ -7,7 +6,7 @@ const reformulateCountryName = (country) => {
   return countArr.map((letter) => (letter === '_' ? ' ' : letter)).join('');
 };
 
-const reformulateCountryId = (id) => {
+export const reformulateCountryId = (id) => {
   if (id === 'us') {
     return 'usa';
   }
@@ -18,7 +17,7 @@ const reformulateCountryId = (id) => {
 function numberWithSpaces(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 }
-const updateCountryNames = (countries) => countries.map((country) => ({
+export const updateCountryNames = (countries) => countries.map((country) => ({
   regions: country.regions.map((region) => ({
     name: region.name,
     id: region.id,
@@ -28,4 +27,3 @@ const updateCountryNames = (countries) => countries.map((country) => ({
   id: reformulateCountryId(country.id),
   today_confirmed: numberWithSpaces(country.today_confirmed),
 }));
-export { incSortByCases, updateCountryNames };

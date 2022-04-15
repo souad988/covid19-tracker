@@ -1,7 +1,7 @@
 import apiStoreService from '../api/apiServices';
-import { incSortByCases, updateCountryNames, numberWithSpaces } from '../services';
+import { updateCountryNames } from '../services';
 
-export const initialState = { countries: [], global_cases: '' };
+export const initialState = { countries: [], globalCases: '' };
 
 const SET_ALL = 'covid19/SET_ALL';
 
@@ -19,8 +19,7 @@ const refactorResponse = (response) => Object.values(response.data.dates['2022-0
 export const setCountries = () => async (dispatch) => {
   const response = await apiStoreService.apiGetAll();
   const countries = refactorResponse(response);
-  const global_cases = countries.reduce((a, b) => a + b.today_confirmed, 0);
-  console.log('from reducer', incSortByCases(countries), global_cases);
-  console.log();
-  dispatch({ type: SET_ALL, data: { countries: updateCountryNames(countries), global_cases } });
+  const globalCases = countries.reduce((a, b) => a + b.today_confirmed, 0);
+  countries.sort((a, b) => b.today_confirmed - a.today_confirmed);
+  dispatch({ type: SET_ALL, data: { countries: updateCountryNames(countries), globalCases } });
 };

@@ -10,14 +10,14 @@ function Header() {
   const headerState = useSelector((state) => state.header);
   const countriesState = useSelector((state) => state.countries);
   console.log('header compnent', headerState.global_cases, headerState.country);
-  const handleClick = (global_cases) => {
-    dispatch(setHeader({ global_cases, img: 'https://mapsvg.com/static/maps/geo-calibrated/world.svg' }));
+  const handleClick = (globalCases) => {
+    dispatch(setHeader({ globalCases, img: 'https://mapsvg.com/static/maps/geo-calibrated/world.svg', country: 'Global' }));
   };
   return (
     <div>
       <header>
         <nav>
-          <Link to="/" onClick={() => handleClick(countriesState.global_cases)}>
+          <Link to="/" onClick={() => handleClick(countriesState.globalCases)}>
             <i className="fas fa-home" />
             {' '}
           </Link>
@@ -34,27 +34,17 @@ function Header() {
         />
         <div className="header_info">
           {' '}
-          {headerState.global_cases !== '' ? (
-            headerState.country ? (
-              <div>
-                <strong>{headerState.country}</strong>
-                <p>
-                  {headerState.global_cases}
-                  {' '}
-                  cases
-                </p>
-              </div>
-            )
-              : (
-                <div>
-                  <strong>Global</strong>
-                  <p>
-                    {headerState.global_cases}
-                    {' '}
-                    cases
-                  </p>
-                </div>
-              )) : <img src={load} alt="load" style={{ width: '40px', height: '40px' }} />}
+          {headerState.globalCases !== '' ? (
+
+            <div>
+              <strong>{headerState.country}</strong>
+              <p>
+                {headerState.globalCases}
+                {' '}
+                cases
+              </p>
+            </div>
+          ) : <img src={load} alt="load" style={{ width: '40px', height: '40px' }} />}
         </div>
       </header>
       <section className="main">

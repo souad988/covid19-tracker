@@ -16,7 +16,7 @@ function Country({ ...props }) {
   const handleClick = () => {
     dispatch(setRegions(regions));
     dispatch(setHeader({
-      global_cases: confirmed,
+      globalCases: confirmed,
       img: imgUrl,
       country: name,
     }));
