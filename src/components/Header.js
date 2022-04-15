@@ -2,8 +2,7 @@ import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setHeader } from '../redux/headerReducer';
-import loading from '../assets/giphy.gif'
-import load from '../assets/loading.gif'
+import load from '../assets/loading.gif';
 import './Header.css';
 
 function Header() {
@@ -19,7 +18,7 @@ function Header() {
       <header>
         <nav>
           <Link to="/" onClick={() => handleClick(countriesState.global_cases)}>
-          <i class="fas fa-home" />
+            <i className="fas fa-home" />
             {' '}
           </Link>
           <strong>covid19 Tracker</strong>
@@ -29,18 +28,33 @@ function Header() {
           </div>
         </nav>
         {/*  */}
-       <div className='header_img' 
-       style={{backgroundImage: `url(${headerState.img})`}} >  
-       </div>
-       <div className='header_info'>
-           
-          
+        <div
+          className="header_img"
+          style={{ backgroundImage: `url(${headerState.img})` }}
+        />
+        <div className="header_info">
           {' '}
-          {headerState.global_cases!==''?(
-                             headerState.country?<div><strong >{headerState.country}</strong><p>{headerState.global_cases} cases</p></div>
-                            : <div><strong>Global</strong><p>{headerState.global_cases} cases</p></div>):<img src={load} alt='load' style={{width:'40px',height:'40px'}}/>                  
-         }
-        
+          {headerState.global_cases !== '' ? (
+            headerState.country ? (
+              <div>
+                <strong>{headerState.country}</strong>
+                <p>
+                  {headerState.global_cases}
+                  {' '}
+                  cases
+                </p>
+              </div>
+            )
+              : (
+                <div>
+                  <strong>Global</strong>
+                  <p>
+                    {headerState.global_cases}
+                    {' '}
+                    cases
+                  </p>
+                </div>
+              )) : <img src={load} alt="load" style={{ width: '40px', height: '40px' }} />}
         </div>
       </header>
       <section className="main">
