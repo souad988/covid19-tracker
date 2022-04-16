@@ -1,0 +1,79 @@
+header {
+  height: 42vh;
+  background-color: #3ad3c5;
+}
+
+nav {
+  padding: 2vh 2%;
+  background-color: #00455b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav * {
+  color: white;
+}
+
+.fa-microphone {
+  margin-right: 10px;
+}
+
+.header_img {
+  width: inherit;
+  height: 37vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.giphy-embed {
+  width: 48px;
+  height: 48px;
+  color: #4ce9e4;
+  background: transparent;
+  border: none;
+}
+
+.header_info {
+  position: absolute;
+  right: 0%;
+  top: 30vh;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 5%;
+  text-align: end;
+}
+
+.header_info p {
+  font-size: 1.1rem;
+}
+
+.load {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.header_date_filter {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  left: 5%;
+  top: 10vh;
+}
+
+.header_date_filter p {
+  margin: auto 10px;
+}
+
+@media screen and (min-width: 900px) {
+  .header_date_filter {
+    font-size: 1.3rem;
+  }
+}

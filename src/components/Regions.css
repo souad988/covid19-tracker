@@ -1,0 +1,38 @@
+.Regions_container {
+  text-align: center;
+  background-color: #009688;
+  border: 1px solid #00455b;
+  min-height: 70vh;
+}
+
+.Regions_container ul {
+  list-style: none;
+}
+
+.Regions_container li {
+  padding: 30px 15px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #00455b;
+  color: #00455b;
+}
+
+.Regions_container li:nth-child(2n+1) {
+  background-color: #00455b;
+  color: white;
+}
+
+.Regions_container li:nth-child(2n) {
+  background-color: #009688;
+}
+
+.regions_error {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 5vh;
+  color: #ffeb3b;
+}
+
+.fa-sign-in-alt {
+  margin-left: 10px;
+}

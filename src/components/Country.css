@@ -1,0 +1,33 @@
+.country_container {
+  height: 25vh;
+  box-shadow: 3px 3px 4px #4d4c4c, -3px -3px 4px #424242;
+  padding: 10px !important;
+  background-color: #00455b;
+  border: 1px solid #4ce9e4;
+  position: relative;
+}
+
+.country_info_side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+  right: 5%;
+}
+
+.country_container * {
+  color: white;
+}
+
+.country_img {
+  width: inherit;
+  height: 75%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
