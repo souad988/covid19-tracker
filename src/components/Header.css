@@ -6,7 +6,7 @@ header {
 }
 
 nav {
-  padding: 0% 2%;
+  padding: 2vh 2%;
   background-color: #00455b;
   display: flex;
   flex-direction: row;
