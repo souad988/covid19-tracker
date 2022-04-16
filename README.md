@@ -6,6 +6,8 @@ this project is react web application that retreives covid19 data from distant a
 
 ![details](https://user-images.githubusercontent.com/59707859/163652725-34447b99-11c0-4fff-ae17-6327c30622fa.PNG)
 
+## Demo
+https://drive.google.com/file/d/1twnaWgOINUSYNVE2FLpgJS-rVbVe98hP/view?usp=sharing
 
 ##Getting Started
 
