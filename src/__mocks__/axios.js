@@ -1,13 +1,14 @@
+const todayDate = (new Date()).toISOString().split('T')[0];
 export default {
   get: () => Promise.resolve({
     data: {
       dates: {
-        '2022-04-12':
+        [todayDate]:
                         {
                           countries: {
                             Afghanistan:
                             {
-                              date: '2022-04-12',
+                              date: [todayDate],
                               id: 'afghanistan',
                               links: [{}],
                               name: 'Afghanistan',

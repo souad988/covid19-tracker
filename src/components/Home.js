@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Country from './Country';
 import './Home.css';
@@ -6,12 +6,26 @@ import load from '../assets/loading.gif';
 
 function Home() {
   const data = useSelector((state) => state.countries);
+  const [visibleData,setVisibleData]=useState(data.countries)
+  const [searchName,setSearchName]=useState('')
+
+  useEffect(() => {
+    setVisibleData(data.countries)
+  }, [data])
+  useEffect(() => {
+    setVisibleData(data.countries.filter(country=>country.name.toLowerCase().includes(searchName.trim().toLowerCase())))
+  }, [searchName])
+   
+  
+  const filterByName=(e)=>{
+      setSearchName(e.target.value) 
+  }
   return (
     <div className="home_container">
-
+      <input name='countryName' type="text" onChange={filterByName} value={searchName} />
       <div className="home_country_list">
-        {data.countries.length > 0
-          ? data.countries.map(
+        {visibleData.length > 0
+          ? visibleData.map(
             (item) => (
               <Country
                 key={item.id}

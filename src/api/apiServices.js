@@ -2,9 +2,9 @@ import axios from 'axios';
 
 const apiUrl = 'https://api.covid19tracking.narrativa.com/api/';
 
-const apiGetAll = async () => {
+const apiGetAll = async (date) => {
   try {
-    const response = await axios.get(`${apiUrl}2022-04-12`);
+    const response = await axios.get(`${apiUrl}${date}`);
     return response;
   } catch (error) {
     return error;

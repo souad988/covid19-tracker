@@ -1,13 +1,13 @@
 import apiStoreService from './apiServices';
-
+const todayDate = (new Date()).toISOString().split('T')[0];
 const expected = {
   dates: {
-    '2022-04-12':
+    [todayDate]:
                 {
                   countries: {
                     Afghanistan:
                     {
-                      date: '2022-04-12',
+                      date: [todayDate],
                       id: 'afghanistan',
                       links: [{}],
                       name: 'Afghanistan',
@@ -22,7 +22,7 @@ const expected = {
 
 describe('fetch api', () => {
   it('expects ', async () => {
-    const result = await apiStoreService.apiGetAll();
+    const result = await apiStoreService.apiGetAll(todayDate);
     expect(result.data).toEqual(expected);
   });
 });
