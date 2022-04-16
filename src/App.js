@@ -11,8 +11,8 @@ import { setHeader } from './redux/headerReducer';
 function App() {
   const dispatch = useDispatch();
   const countriesState = useSelector((state) => state.countries);
-  const todayDate = (new Date()).toISOString().split('T')[0]
-  console.log(todayDate)
+  const todayDate = (new Date()).toISOString().split('T')[0];
+  console.log(todayDate);
   useEffect(() => {
     dispatch(setCountries(todayDate));
   }, []);

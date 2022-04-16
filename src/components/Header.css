@@ -14,7 +14,7 @@ nav {
 nav * {
   color: white;
 }
- 
+
 .fa-microphone {
   margin-right: 10px;
 }
@@ -58,23 +58,23 @@ nav * {
 }
 
 .header_date_filter {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    position: absolute;
-    left: 5%;
-    top: 10vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  left: 5%;
+  top: 10vh;
 }
 
 .header_date_filter p {
-    margin: auto 10px;
+  margin: auto 10px;
 }
 
-  
-  @media screen and (min-width: 900px) {
-    .header_date_filter {
-        font-size: 1.3rem;
-    }
+
+@media screen and (min-width: 900px) {
+  .header_date_filter {
+    font-size: 1.3rem;
   }
+}

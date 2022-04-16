@@ -17,17 +17,17 @@ export const reformulateCountryId = (id) => {
 function numberWithSpaces(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 }
-export const incrementeYearByOne=(date)=>{
-    const dateArr=date.split('-')
-    dateArr[0]= parseInt(dateArr[0],10)+1 
-    return dateArr.join('-')
-}
+export const incrementeYearByOne = (date) => {
+  const dateArr = date.split('-');
+  dateArr[0] = parseInt(dateArr[0], 10) + 1;
+  return dateArr.join('-');
+};
 
-export const decrementeYearByOne=(date)=>{
-    const dateArr=date.split('-')
-    dateArr[0]= parseInt(dateArr[0],10)-1 
-    return dateArr.join('-')
-}
+export const decrementeYearByOne = (date) => {
+  const dateArr = date.split('-');
+  dateArr[0] = parseInt(dateArr[0], 10) - 1;
+  return dateArr.join('-');
+};
 
 export const updateCountryNames = (countries) => countries.map((country) => ({
   regions: country.regions.map((region) => ({
